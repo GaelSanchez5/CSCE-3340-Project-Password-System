@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-c031c6", "id": "nucleo", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -15.77, "left": -320, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": 238, "left": -493.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "lcd1:VSS", "nucleo:GND.2", "green", [ "v0" ] ],
+    [ "lcd1:VDD", "nucleo:5V.2", "green", [ "v0" ] ],
+    [ "lcd1:RW", "nucleo:GND.5", "green", [ "v0" ] ],
+    [ "lcd1:D0", "nucleo:PA0", "green", [ "v0" ] ],
+    [ "lcd1:D1", "nucleo:PA1", "green", [ "v0" ] ],
+    [ "lcd1:D2", "nucleo:PA2", "green", [ "v0" ] ],
+    [ "lcd1:D3", "nucleo:PA3", "green", [ "v0" ] ],
+    [ "lcd1:D4", "nucleo:PA4", "green", [ "v0" ] ],
+    [ "lcd1:D5", "nucleo:PA5", "green", [ "v0" ] ],
+    [ "lcd1:D6", "nucleo:PA6", "green", [ "v0" ] ],
+    [ "lcd1:D7", "nucleo:PA7", "green", [ "v0" ] ],
+    [ "lcd1:A", "nucleo:5V.3", "green", [ "v0" ] ],
+    [ "lcd1:K", "nucleo:GND.4", "green", [ "v0" ] ],
+    [ "lcd1:RS", "nucleo:PA8", "green", [ "v0" ] ],
+    [ "lcd1:E", "nucleo:PA9", "green", [ "v0" ] ],
+    [ "nucleo:PB0.1", "keypad1:R1", "green", [ "h-3.63", "v442.43", "h-652.8" ] ],
+    [ "nucleo:PB1", "keypad1:R2", "green", [ "h-0.98", "v432.83", "h-403.2" ] ],
+    [ "nucleo:PB2", "keypad1:R3", "green", [ "h25.17", "v500.03", "h-652.8" ] ],
+    [ "nucleo:PB3", "keypad1:R4", "green", [ "h-13.23", "v423.23", "h-595.2" ] ],
+    [ "nucleo:PB4", "keypad1:C1", "green", [ "h-42.03", "v432.83", "h-556.8" ] ],
+    [ "nucleo:PB5", "keypad1:C2", "green", [ "h-61.23", "v432.83", "h-528", "v-9.6" ] ],
+    [ "nucleo:PB6", "keypad1:C3", "green", [ "h-80.43", "v375.23", "h-499.2" ] ],
+    [ "nucleo:PB7", "keypad1:C4", "green", [ "h-99.63", "v356.03", "h-470.4" ] ]
+  ],
+  "dependencies": {}
+}
